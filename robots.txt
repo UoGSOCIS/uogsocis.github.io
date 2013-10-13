@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://UoGSOCIS.github.io/sitemap.xml 
