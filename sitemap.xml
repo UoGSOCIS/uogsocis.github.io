@@ -1,16 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://UoGSOCIS.github.io/news/2013/10/14/hello-world/</loc>
-        <lastmod>2013-10-14T12:23:54-04:00</lastmod>
-    </url>
-    <url>
         <loc>http://UoGSOCIS.github.io/news/archives/</loc>
-        <lastmod>2013-10-14T12:23:54-04:00</lastmod>
+        <lastmod>2013-10-13T16:07:09-04:00</lastmod>
     </url>
     <url>
         <loc>http://UoGSOCIS.github.io/news/</loc>
-        <lastmod>2013-10-14T12:23:54-04:00</lastmod>
+        <lastmod>2013-10-13T16:07:09-04:00</lastmod>
     </url>
     <url>
         <loc>http://UoGSOCIS.github.io/robots.txt</loc>
@@ -18,14 +14,14 @@
     </url>
     <url>
         <loc>http://UoGSOCIS.github.io/contact/</loc>
-        <lastmod>2013-10-14T12:23:54-04:00</lastmod>
+        <lastmod>2013-10-13T21:02:56-04:00</lastmod>
     </url>
     <url>
         <loc>http://UoGSOCIS.github.io/about/</loc>
-        <lastmod>2013-10-14T12:23:54-04:00</lastmod>
+        <lastmod>2013-10-13T20:39:46-04:00</lastmod>
     </url>
     <url>
         <loc>http://UoGSOCIS.github.io/</loc>
-        <lastmod>2013-10-14T12:23:54-04:00</lastmod>
+        <lastmod>2013-10-13T20:29:54-04:00</lastmod>
     </url>
 </urlset>
