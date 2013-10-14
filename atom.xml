@@ -4,7 +4,7 @@
   <title><![CDATA[SOCIS]]></title>
   <link href="http://UoGSOCIS.github.io/atom.xml" rel="self"/>
   <link href="http://UoGSOCIS.github.io/"/>
-  <updated>2013-10-14T12:21:02-04:00</updated>
+  <updated>2013-10-14T12:24:02-04:00</updated>
   <id>http://UoGSOCIS.github.io/</id>
   <author>
     <name><![CDATA[SOCIS]]></name>
@@ -12,5 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[hello world]]></title>
+    <link href="http://UoGSOCIS.github.io/news/2013/10/14/hello-world/"/>
+    <updated>2013-10-14T12:22:00-04:00</updated>
+    <id>http://UoGSOCIS.github.io/news/2013/10/14/hello-world</id>
+    <content type="html"><![CDATA[<h1>Hello World</h1>
+
+<p>Just a regular paragraph here</p>
+]]></content>
+  </entry>
   
 </feed>
