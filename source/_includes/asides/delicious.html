@@ -1,8 +1,17 @@
 {% if site.delicious_user %}
-<section>
-  <h1>On Delicious</h1>
-  <div id="delicious"></div>
-  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/{{ site.delicious_user }}?count={{ site.delicious_count }}&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
-  <p><a href="http://delicious.com/{{ site.delicious_user }}">My Delicious Bookmarks &raquo;</a></p>
+<section class="aside-module grid__item one-whole lap-one-half">
+  <h1 class="title delta">
+    Delicious
+    <small class="pull-right">
+      <a class="btn" href="//delicious.com/{{ site.delicious_user }}" title="@{{ site.delicious_user }} on Delicious" target="_blank">
+        <i class="icon-external-link"></i>
+      </a>
+    </small>
+  </h1>
+  <div id="delicious">
+    <span class="loading">
+      <i class="icon-spinner icon-spin"></i>
+    </span>
+  </div>
 </section>
 {% endif %}
