@@ -1,3 +1,54 @@
+socis.ca
+==================
+
+This is the new website for the Society of Computing and Information Science and the University of Guelph!
+
+If you see something that needs to be fixed up or want to add a new feature to the site, feel free to file an issue,
+or better yet, put up a PR with a fix.
+
+The site is built using [Octopress](http://octopress.org/docs/) and is hosted on Github Pages. The `source` branch is the Octopress working directory, the `master` branch is where Octopress compiles the site.
+
+Installation
+------------
+```
+#Install Ruby 1.9.3 using RVM
+curl -L https://get.rvm.io | bash -s stable --ruby
+rvm install 1.9.3
+#You may receive an error here saying something about logging in. Simply run /bin/bash --login on bash or /bin/zsh --login if you use zsh and run the command again
+rvm use 1.9.3 
+#Get bundler
+gem install bundler
+
+#Clone the source branch
+git clone -b source git@github.com:UoGSOCIS/uogsocis.github.io.git uogsocis.github.io
+cd uogsocis.github.io
+bundle install 
+#Clone the master branch
+mkdir _deploy
+cd _deploy
+git init
+git remote add origin git@github.com:UoGSOCIS/uogsocis.github.io.git
+git pull origin master
+cd ..
+
+#Install the Oscailte theme 
+git clone --recursive https://github.com/coogie/oscailte.git .themes/oscailte
+#If you are on zsh you need to run rake install\['oscailte'\] instead
+rake install['oscailte']
+```
+
+Compiling the Site
+------------------
+Cd into the `uogsocis.github.io` directory and run `rake generate` to compile the site into the `_deploy` directory
+
+Pushing Changes
+---------------
+Cd into the `uogsocis.github.io` directory and run `rake deploy` to push changes onto the master branch
+
+Making Changes
+--------------
+The uncompiled site is located in the `source` directory. Changes to the site should be made here and then a new version compiled and pushed
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
