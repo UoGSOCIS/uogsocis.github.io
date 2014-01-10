@@ -1,0 +1,29 @@
+doctype html
+head
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title #{ title }
+    meta(name='author', content='SOCIS')
+    meta(name='description', content='Computer Science We are a group of computer science students for computer science students. We coordinate with the School of Computer Science in …')
+    meta(name='viewport', content='width=device-width')
+    link(rel='canonical', href='http://UoGSOCIS.github.io')
+    link(href='/favicon.png', rel='icon')
+    link(href='/stylesheets/screen.css', media='screen, projection', rel='stylesheet')
+  body
+    != partial("../../_partials/nav.jade")
+    .grid-wrapper
+      .grid.grid-center
+        .grid__item.four-fifths.lap-one-whole.palm-one-whole
+          article.post
+            header
+              h1.title.indent #{ title }
+              .meta.clearfix 
+                i.icon-calendar
+                |  #{ date }
+            != yield
+          != partial("../../_partials/disqus.jade")
+    != partial("../../_partials/footer.jade")
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
+    script(src='//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js')
+    script(defer='', src='/javascripts/octopress.js')
