@@ -1,0 +1,10 @@
+# Site settings
+title: Your awesome title
+email: exec@socis.ca
+description: ""
+url: "http://uogsocis.github.io"
+
+# Build settings
+markdown: redcarpet
+permalink: /posts/:year/:month/:day/:title
+timezone: America/New_York
