@@ -2,25 +2,14 @@
 layout: default
 ---
 
-<div class=
-  "grid-wrapper grid grid-center grid__item two-thirds lap-one-whole palm-one-whole">
-  <article class="listing">
-    <h1 class="beta"><a href="/news/posts/agm-results-06-03-14">SOCIS Annual
-        General Meeting Election 2014</a></h1>
-
-    <div class="meta clearfix">
-      <i class="icon-calendar"></i> March 5, 2014
-    </div>
-  </article>
-  <hr>
-
-  <article class="listing">
-    <h1 class="beta"><a href="/news/posts/by-election-10-01-14">Community
-        Liaison By-Election: Winter 2014</a></h1>
-
-    <div class="meta clearfix">
-      <i class="icon-calendar"></i> January 10, 2014
-    </div>
-  </article>
-  <hr>
+<div class="container-fluid">
+  <div class="col-md-6 col-md-offset-3">
+    {% for post in site.posts %}
+    <article>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <p>{{ post.date }}</p>
+    </article>
+    <hr>
+    {% endfor %}
+  </div>
 </div>
