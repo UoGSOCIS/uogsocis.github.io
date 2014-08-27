@@ -22,5 +22,10 @@ name="description">
 <link href="//atom.xml" rel="alternate" title="SOCIS" type=
 "application/atom+xml">
 </head>
-{{ page.content }}
+<body>
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+{% include google-analytics.html %}
+</body>
 </html>
