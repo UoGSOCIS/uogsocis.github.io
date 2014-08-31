@@ -24,7 +24,7 @@ layout: default
 
 <div class="container-fluid">
   <div id="callouts" class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="icon-div">
         <a href="http://www.socs.uoguelph.ca/"><i class="fa fa-laptop"></i></a>
       </div>
@@ -37,7 +37,7 @@ layout: default
       number of services for students like the CS lounge which is a space for
       relaxation and socializing.</p>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="icon-div">
         <a href="https://www.facebook.com/groups/UoGSOCIS/"><i class="fa fa-users"></i></a>
       </div>
@@ -48,6 +48,14 @@ layout: default
       Hackathons, LANs and Paintballing. We are always looking for new events
       to run so if you have any thing you'd like to see us do let us
       know!</p>
+    </div>
+    <div class="col-sm-4">
+      <h4>Events Feed</h4>
+      <hr>
+      {% for event in site.categories.Events %}
+        <a href="{{ event.url }}">{{ event.title }}</a>
+        <br/>
+      {% endfor %}
     </div>
     <!-- Temporarily hiding Roboticon until we can update the article for the current year -->
     <!-- <div class="col-sm-4">
