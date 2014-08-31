@@ -52,18 +52,16 @@ layout: default
     <div class="col-sm-4">
       <h4>Events Feed</h4>
       <hr>
-      <div class="container">
-        {% for post in site.posts %}
-          {% if post.categories contains 'events' %}
-            <div class="row">
-              <div class="col-sm-6"><a href="{{ post.url }}">{{ post.title }}</a></div>
-              <div class="col-sm-6">
-                <p style="text-align: right;">{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
-              </div>
+      {% for post in site.posts %}
+        {% if post.categories contains 'events' %}
+          <div class="row">
+            <div class="col-sm-6"><a href="{{ post.url }}">{{ post.title }}</a></div>
+            <div class="col-sm-6">
+              <p style="text-align: right;">{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
             </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <!-- Temporarily hiding Roboticon until we can update the article for the current year -->
     <!-- <div class="col-sm-4">
