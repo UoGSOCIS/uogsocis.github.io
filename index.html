@@ -54,7 +54,12 @@ layout: default
       <hr>
       {% for post in site.posts %}
         {% if post.categories contains 'events' %}
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          <div class="row">
+            <div class="col-sm-6"><a href="{{ post.url }}">{{ post.title }}</a></div>
+            <div class="col-sm-6">
+              <p style="text-align: right;">{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
+            </div>
+          </div
         {% endif %}
       {% endfor %}
     </div>

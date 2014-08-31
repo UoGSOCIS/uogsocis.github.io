@@ -9,12 +9,11 @@ event_time: "7:30pm-8:30pm"
     <article>
       <header>
         <h1 class="title indent">{{ page.title }}</h1>
-        <p>{{ page.event_time }}</p>
-        <p>{{ page.date | date: '%B %d, %Y' }}</p>
+        <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
+        <p>Location: <a href="http://www.uoguelph.ca/campus/map/rozanski/">Rozanski Hall 102</a></p>
         <hr>
       </header>
 
-      <p>Location: <a href="http://www.uoguelph.ca/campus/map/rozanski/">Rozanski Hall 102</a></p>
       <p>
         Are you new to programming or a seasoned guru? Either way we want to see you at our annual quiz night!
         You'll get a chance to meet the Society of Computing and Information Science Executive team,
