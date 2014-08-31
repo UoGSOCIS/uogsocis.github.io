@@ -9,12 +9,11 @@ event_time: "3:00pm-4:00pm"
     <article>
       <header>
         <h1 class="title indent">{{ page.title }}</h1>
-        <p>{{ page.event_time }}</p>
-        <p>{{ page.date | date: '%B %d, %Y' }}</p>
+        <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
+        <p>Location: <a href="http://www.uoguelph.ca/campus/map/thornbrough/">Thornborough Atrium</a></p>
         <hr>
       </header>
 
-      <p>Location: <a href="http://www.uoguelph.ca/campus/map/thornbrough/">Thornborough Atrium</a></p>
       <p>Let's explore the awesome new microcomputer you'll be using for Introduction to Computing.</p>
     </article>
 
