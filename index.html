@@ -52,9 +52,10 @@ layout: default
     <div class="col-sm-4">
       <h4>Events Feed</h4>
       <hr>
-      {% for event in site.categories.[events] %}
-        <a href="{{ event.url }}">{{ event.title }}</a>
-        <br/>
+      {% for post in site.posts %}
+        {% if post.categories contains 'events' %}
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        {% endif %}
       {% endfor %}
     </div>
     <!-- Temporarily hiding Roboticon until we can update the article for the current year -->
