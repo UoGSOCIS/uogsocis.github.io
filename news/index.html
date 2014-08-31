@@ -7,7 +7,7 @@ layout: default
     {% for post in site.posts %}
     <article>
       <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      <p>{{ page.date | date_to_long_string }}</p>
+      <p>{{ page.date | date: '%B %d, %Y' }}</p>
     </article>
     <hr>
     {% endfor %}
