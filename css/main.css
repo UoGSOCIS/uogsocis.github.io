@@ -157,3 +157,11 @@ hr {
   border-bottom: 2px solid #049cdb;
 }
 
+/******************** Resizing support ********************/
+
+@media only screen and (max-width: 768px) {
+  #callouts {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
