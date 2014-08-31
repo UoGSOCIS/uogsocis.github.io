@@ -52,7 +52,7 @@ layout: default
     <div class="col-sm-4">
       <h4>Events Feed</h4>
       <hr>
-      {% for event in site.categories.Events %}
+      {% for event in site.categories[Events] %}
         <a href="{{ event.url }}">{{ event.title }}</a>
         <br/>
       {% endfor %}
