@@ -41,21 +41,6 @@ layout: default
       <hr class="visible-xs">
     </div>
     <div class="col-sm-4">
-      <h4>Events Feed</h4>
-      <hr>
-      {% for post in site.posts %}
-        {% if post.categories contains 'events' %}
-          <div class="row">
-            <div class="col-sm-6"><a href="{{ post.url }}">{{ post.title }}</a></div>
-            <div class="col-sm-6">
-              <p style="text-align: right;">{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
-      <hr class="visible-xs">
-    </div>
-    <div class="col-sm-4">
       <div class="icon-div">
         <a href="https://www.facebook.com/groups/UoGSOCIS/"><i class="fa fa-users"></i></a>
       </div>
@@ -70,18 +55,22 @@ layout: default
       </p>
       <hr class="visible-xs">
     </div>
-    <!-- Temporarily hiding Roboticon until we can update the article for the current year -->
-    <!-- <div class="col-sm-4">
+    <div class="col-sm-4">
       <div class="icon-div">
-        <a href="/roboticon/"><i class="fa fa-rocket"></i></a>
+        <a href="/events/"><i class="fa fa-calendar"></i></a>
       </div>
-      <h4>Roboticon</h4>
+      <h4>Events Feed</h4>
       <hr>
-      <p>Roboticon is an anual effort by the School of Computer Science and
-      SOCIS to foster high schoolers' interest in the field of Computer
-      Science. Competitors are tasked with building <a href="http://mindstorms.lego.com/en-us/default.aspx">Lego Mindstorms</a>
-      robots to complete a series of challenges designed by SOCIS
-      members.</p>
-    </div> -->
+      {% for post in site.posts %}
+        {% if post.categories contains 'events' %}
+          <div class="row">
+            <div class="col-sm-6"><a href="{{ post.url }}">{{ post.title }}</a></div>
+            <div class="col-sm-6">
+              <p style="text-align: right;">{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </div>
