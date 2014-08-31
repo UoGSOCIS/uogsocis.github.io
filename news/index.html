@@ -4,7 +4,7 @@ layout: default
 
 <div class="container-fluid">
   <div class="col-md-6 col-md-offset-3">
-    {% for post in site.categories[News] %}
+    {% for post in site.categories.[News] %}
       <article>
         <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
         <p>{{ post.date | date: '%B %d, %Y' }}</p>
