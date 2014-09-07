@@ -3,6 +3,7 @@ SOCIS Website
 
 This is the official repository for the http://socis.ca website, a student built and maintained website. If you feel like joining in on the construction, feel free on cloning this repository and submitting some changes. Code is reviewed by the SOCIS exec (specifically the system and assistant system administators) before it becomes live, so for new students, this could be your first experience with code review!
 
+
 Contributing
 ------------
 
@@ -19,6 +20,7 @@ likely reject it and ask that you split it up.
 
 We reserve the right to reject pull requests and close issues if we do not
 agree with how they affect the website.
+
 
 Installation
 ------------
@@ -44,6 +46,7 @@ To start the local server, all you need to do is run `jekyll serve` from the web
 If you open up your browser and navigate to `localhost:4000`, you should now be able to see the site running locally.
 
 _Note that after making any local changes, you will need to restart the Jekyll server._
+
 
 
 That's all folks!
