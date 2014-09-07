@@ -1,8 +1,27 @@
 SOCIS Website
 ==================
-http://socis.ca
 
-This is a student built and maintained website. If you feel like joining in on the construction, feel free on cloning this repository and submitting some changes. Code is reviewed by the SOCIS exec before it becomes live, so for new students, this could be your first experience with code review!
+This is the official repository for the http://socis.ca website, a student built and maintained website. If you feel like joining in on the construction, feel free on cloning this repository and submitting some changes. Code is reviewed by the SOCIS exec (specifically the system and assistant system administators) before it becomes live, so for new students, this could be your first experience with code review!
+
+Contributing
+------------
+
+We welcome pull requests and issues but will be strict in our enforcing of
+proper programming styles on any submitted code.
+
+In order to contribute, please fork this repository and submit a pull request
+to our master branch. Our admin will review the request and inform you of any
+changes that need to be made before the merge.
+
+If you are building a large feature, discuss it with us first, and make
+multiple small commits. If you submit a single monolithic commit, we will
+likely reject it and ask that you split it up.
+
+We reserve the right to reject pull requests and close issues if we do not
+agree with how they affect the website.
+
+Installation
+------------
 
 __1. Clone the Repo__
 
@@ -15,7 +34,9 @@ __2. Install Jekyll__
 http://jekyllrb.com/docs/installation/
 
 No need to reiterate the Jekyll docs, this is the part which will take a while to install. You're going to need Ruby, Rubygems and NodeJS.
-Once you have those all installed run `gem install jekyll` to get Jekyll installed locally.
+_We recommend using [RVM](http://rvm.io/) for managing your ruby gems._
+
+Once you have all those installed, run `gem install jekyll` to get Jekyll installed locally.
 
 __3. Start the web server__
 
