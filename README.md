@@ -13,10 +13,12 @@ Run `git clone https://github.com/UoGSOCIS/uogsocis.github.io` somewhere locally
 __2. Install Jekyll__
 
 http://jekyllrb.com/docs/installation/
+
 No need to reiterate the Jekyll docs, this is the part which will take a while to install. You're going to need Ruby, Rubygems and NodeJS.
 Once you have those all installed run `gem install jekyll` to get Jekyll installed locally.
 
 __3. Start the web server__
+
 To start the local server, all you need to do is run `jekyll serve` from the website's root directory.
 If you open up your browser and navigate to `localhost:4000`, you should now be able to see the site running locally.
 
