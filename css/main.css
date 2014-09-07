@@ -7,12 +7,6 @@ body {
 
 /******************** Landing Page Customizations ********************/
 
-/* Push callouts section closer to center. */
-#callouts {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
 /* Center icons. */
 #callouts .icon-div {
   text-align: center;
@@ -97,14 +91,17 @@ footer {
   box-shadow: 0 0 3px rgba(0,0,0,0.25);
 }
 
+footer .container-fluid, footer .row {
+  padding-top: 0;
+}
+
 /* Add space in footer before text. */
 footer div{
   padding: 20px;
 }
 
-/* Push text in footer closer to center. */
-footer p {
-  margin-left: 100px;
+#social-links a:hover {
+  text-decoration: none;
 }
 
 /******************** Jumbotron Customizations ********************/
