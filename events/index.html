@@ -4,10 +4,13 @@ layout: default
 
 <div class="container-fluid">
   <div class="col-md-6 col-md-offset-3">
+    <h1>Recurring Events</h1>
+    <p class="lead">Your SOCIS executive team hosts a public meeting every Wednesday at 5:30 in Reynolds 219.</p>
+    <h1>Special Events</h1>
     {% for post in site.posts %}
       {% if post.categories contains 'events' %}
         <article>
-          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
           <p>{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
         </article>
         <hr>
