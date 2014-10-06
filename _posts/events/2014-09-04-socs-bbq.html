@@ -6,9 +6,9 @@ event_time: "5:00pm-8:00pm"
 ---
 <div class="container-fluid">
   <div class= "col-md-8 col-md-offset-2">
-    <article>
+    <article class="article-container">
       <header>
-        <h1 class="title indent">{{ page.title }}</h1>
+        <h2 class="title indent">{{ page.title }}</h2>
         <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
         <p>Location: <a href="http://www.uoguelph.ca/campus/map/johnstongreen/">Johnston Green</a></p>
         <hr>
@@ -23,7 +23,7 @@ event_time: "5:00pm-8:00pm"
     </article>
 
     <section id="disqus">
-      <h1 class="indent title">Comments</h1>
+      <h2 class="indent title">Comments</h2>
       {% include disqus.html %}
     </section>
   </div>
