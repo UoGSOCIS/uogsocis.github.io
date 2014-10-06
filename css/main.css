@@ -146,12 +146,37 @@ footer div{
   font-style: italic;
 }
 
+.article-container {
+  background-color: white;
+  padding: 2px 15px 15px;
+  border-radius: 1%;
+  margin: 15px 0 30px;
+
+  /* Add shadow beneath container. */
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  -ms-box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  -o-box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  box-shadow: 0 0 3px rgba(0,0,0,0.25);
+}
+
 /******************** Horizontal Rule Customizations ********************/
 
 /* Make horizontal rule thicker and blue. */
 hr {
   border: none;
   border-bottom: 2px solid #049cdb;
+}
+
+/* An option for a less verbose grey hr as well. */
+hr.grey {
+  border: none;
+  border-bottom: 2px solid #e7e7e7;
+}
+
+/* Jekyll makes it hard to do stuff on the last iteration of a loop. This will hide the dangling hr at the end. */
+hr.hide-last:last-of-type {
+  display: none;
 }
 
 /******************** Resizing support ********************/
