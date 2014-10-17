@@ -9,11 +9,28 @@ layout: default
       <hr>
       <p>Your SOCIS executive team hosts a public meeting every Wednesday at 5:30 in Reynolds 219.</p>
     </article>
+
+    {% assign curDate = site.time | date: '%s' %}
     <article class="article-container">
-      <h2>Special Events</h2>
+      <h2>Upcoming Events</h2>
+      <hr>
+      {% for post in site.posts reversed %}
+        {% assign postDate = post.date | date: '%s' %}
+        {% if post.categories contains 'events' and postDate >= curDate %}
+          <article>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
+          </article>
+          <hr class="grey hide-last">
+        {% endif %}
+      {% endfor %}
+    </article>
+    <article class="article-container">
+      <h2>Past Events</h2>
       <hr>
       {% for post in site.posts %}
-        {% if post.categories contains 'events' %}
+        {% assign postDate = post.date | date: '%s' %}
+        {% if post.categories contains 'events' and postDate < curDate %}
           <article>
             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
             <p>{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
