@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="container-fluid">
+  <div class="col-md-6 col-md-offset-3">
+    <article class="article-container">
+      <h2>Guelph Coding Community</h2>
+      <hr>
+      <p>
+        The Guelph Coding Community has been organizing student run Tech Talks since 2013. They are typically held every other Wednesday night at 7:00pm in the Reynold's Mac Lab during the Fall and Winter semesters. Check the site for upcoming sessions and information about the speakers and their topics.
+        <br><br>
+        If you would like to give your own talk during a GCC event, feel free to email the <a href="mailto:exec@socis.ca">SOCIS Exec team</a>. We would love to hear about your area of interest.
+      </p>
+    </article>
+    <article class="article-container">
+      <h2>Upcoming Events</h2>
+      <hr>
+      {% for post in site.posts %}
+        {% if post.categories contains 'events' and post.categories contains 'gcc' and post.categories contains 'upcoming' %}
+          <article>
+            <h3><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></h3>
+            <p>{{ post.event_time }}</p>
+          </article>
+          <hr class="grey hide-last">
+        {% endif %}
+      {% endfor %}
+    </article>
+    <article class="article-container">
+      <h2>Past Events</h2>
+      <hr>
+      {% for post in site.posts %}
+        {% if post.categories contains 'events' and post.categories contains 'gcc' %}
+          {% unless post.categories contains 'upcoming' %}
+            <article>
+              <div class="fluid-container past-gcc-event">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h3><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></h3>
+                    <p>Presenters: {{ post.speakers }}</p>
+                  </div>
+                  <div class="col-lg-6">
+                    {% if post.files != "none" %}
+                      <a class="view-past-gcc-event-files" target="_blank" href="{{ post.files }}">View Presentations</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </article>
+            <hr class="grey hide-last">
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </article>
+  </div>
+</div>
