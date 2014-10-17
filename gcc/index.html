@@ -13,11 +13,14 @@ layout: default
         If you would like to give your own talk during a GCC event, feel free to email the <a href="mailto:exec@socis.ca">SOCIS Exec team</a>. We would love to hear about your area of interest.
       </p>
     </article>
+
+    {% assign curDate = site.time | date: '%s' %}
     <article class="article-container">
       <h2>Upcoming Events</h2>
       <hr>
-      {% for post in site.posts %}
-        {% if post.categories contains 'events' and post.categories contains 'gcc' and post.categories contains 'upcoming' %}
+      {% for post in site.posts reversed %}
+        {% assign postDate = post.date | date: '%s' %}
+        {% if post.categories contains 'events' and post.categories contains 'gcc' and postDate >= curDate %}
           <article>
             <h3><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></h3>
             <p>{{ post.event_time }}</p>
@@ -30,25 +33,24 @@ layout: default
       <h2>Past Events</h2>
       <hr>
       {% for post in site.posts %}
-        {% if post.categories contains 'events' and post.categories contains 'gcc' %}
-          {% unless post.categories contains 'upcoming' %}
-            <article>
-              <div class="fluid-container past-gcc-event">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <h3><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></h3>
-                    <p>Presenters: {{ post.speakers }}</p>
-                  </div>
-                  <div class="col-lg-6">
-                    {% if post.files != "none" %}
-                      <a class="view-past-gcc-event-files" target="_blank" href="{{ post.files }}">View Presentations</a>
-                    {% endif %}
-                  </div>
+        {% assign postDate = post.date | date: '%s' %}
+        {% if post.categories contains 'events' and post.categories contains 'gcc' and postDate < curDate %}
+          <article>
+            <div class="fluid-container past-gcc-event">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h3><a href="{{ post.url }}">{{ post.date | date: '%B %d, %Y' }}</a></h3>
+                  <p>Presenters: {{ post.speakers }}</p>
+                </div>
+                <div class="col-lg-6">
+                  {% if post.files != "none" %}
+                    <a class="view-past-gcc-event-files" target="_blank" href="{{ post.files }}">View Presentations</a>
+                  {% endif %}
                 </div>
               </div>
-            </article>
-            <hr class="grey hide-last">
-          {% endunless %}
+            </div>
+          </article>
+          <hr class="grey hide-last">
         {% endif %}
       {% endfor %}
     </article>

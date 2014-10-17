@@ -42,8 +42,10 @@ layout: default
       </div>
       <h4>Events Feed</h4>
       <hr>
+      {% assign curDate = site.time | date: '%s' %}
       {% for post in site.posts reversed %}
-        {% if post.categories contains 'events' and post.categories contains 'upcoming' %}
+        {% assign postDate = post.date | date: '%s' %}
+        {% if post.categories contains 'events' and postDate >= curDate %}
           <div class="row">
             <div class="col-sm-6"><a href="{{ post.url }}">{{ post.title }}</a></div>
             <div class="col-sm-6">
