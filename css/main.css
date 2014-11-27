@@ -90,6 +90,16 @@ body {
   padding-right: 20px;
 }
 
+/* Dropdown appear on hover instead of on click */
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+}
+
+ul.nav li.dropdown > ul.dropdown-menu li a {
+  line-height: 2;
+  height: auto;
+}
+
 /******************** Footer Customizations ********************/
 footer {
   /* Make footer white and taller. */
