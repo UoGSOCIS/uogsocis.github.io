@@ -43,6 +43,11 @@ body {
   text-align: center;
 }
 
+.hero {
+  background-color: rgba(250, 250, 250, 0.25);
+  border-radius: 6px;
+}
+
 /******************** Header Customizations ********************/
 
 /* Remove margin beneath navbar. */
