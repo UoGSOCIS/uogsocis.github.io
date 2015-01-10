@@ -2,18 +2,20 @@
 layout: default
 ---
 
-<div class="container-fluid">
-  <div class="col-md-6 col-md-offset-3">
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
     <article class="article-container">
       <h2>Recurring Events</h2>
       <hr>
       <p>Your SOCIS executive team hosts a public meeting every Wednesday at 5:30 in Reynolds 219.</p>
     </article>
 
-    {% assign curDate = site.time | date: '%s' %}
     <article class="article-container">
       <h2>Upcoming Events</h2>
       <hr>
+      {% assign emptyEventSchedule = true %}
+      {% assign curDate = site.time | date: '%s' %}
+
       {% for post in site.posts reversed %}
         {% assign postDate = post.date | date: '%s' %}
         {% if post.categories contains 'events' and postDate >= curDate %}
@@ -22,8 +24,15 @@ layout: default
             <p>{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
           </article>
           <hr class="grey hide-last">
+          {% assign emptyEventSchedule = false %}
         {% endif %}
       {% endfor %}
+
+      {% if emptyEventSchedule %}
+        <p>
+          There are not currently any upcoming events. Check out the <a target="_blank" href="{{ site.facebook_url }}">Facebook</a> and <a target="_blank" href="{{ site.twitter_url }}">Twitter</a> feeds to keep yourself up to date about all SOCIS news!
+        </p>
+      {% endif %}
     </article>
     <article class="article-container">
       <h2>Past Events</h2>

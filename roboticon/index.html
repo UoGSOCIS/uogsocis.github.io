@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div class="container-fluid">
-  <div class="col-md-6 col-md-offset-3">
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
     <article class="article-container">
       <h2>Roboticon 2015</h2>
       <hr>
@@ -68,9 +68,95 @@ layout: default
       </section>
     </article>
 
-    <section id="disqus">
-      <h2>Comments</h2>
-      {% include disqus.html %}
-    </section>
+    <article class="article-container">
+      <section>
+        <h2>Challenge Description</h2>
+        <hr>
+        <ol>
+          <li>
+            The challenge area will be a 5 foot by 6 foot area enclosed by a 6 foot
+            by 6 foot wall, characterised by a 5 by 6 grid of 1 foot by 1 foot squares
+            of varying colour.
+          </li>
+          <li>
+            Robots must navigate up one of the five columns (starting on a neutral tile)
+            while reading a binary number from the grid beneath themselves, with digits being
+            represented by white for 0 and grey for 1.
+          </li>
+          <li>
+            Once the robot reaches the end of column, it will need to turn. If the number read
+            is divisible by either 3 or 4, the robot will turn left and travel down the next column to
+            its left; otherwise, the robot will turn right and travel down the next column to its right.
+          </li>
+          <li>
+            Robots must only travel each single column one time. If the next column it has been instructed
+            to travel down has been traversed already, the robot must successfully continue traveling
+            left/right until it reaches a column it has not yet traveled down.
+          </li>
+          <li>
+            Once the robot has traveled down all five columns, it must come to a complete stop in a neutral area.
+          </li>
+          <li>
+            The robot will always start in the centre column facing in a predetermined direction.
+          </li>
+          <li>
+            Scores will be tallied based on the number of columns successfully traveled in the correct
+            direction and correct order. Ties will be decided by time taken.
+          </li>
+        </ol>
+        <hr>
+        <img src="/img/roboticon2015_grid.png" href="Guelph Roboticon Example Grid" class="dynamic-img" />
+        <p class="text-center">Sample competition grid.</p>
+        <hr class="grey">
+        <p>
+          The grid squares in the challenge area will be one of three colours: white, grey, and black.
+          In the play area there will be three parts. See diagram.
+        </p>
+        <ol>
+          <li>Run-off: 6 inch wide run-off on either side of the main area.</li>
+          <li>
+            Neutral area: A row where squares will alternate in colour so as to make counting columns
+            straightforward. There is one at both the top and bottom of a column, framing the active area.
+            Note that the order in which colours alternate is not fixed, nor is any given neutral area
+            guaranteed to use all three colours. The neutral area may not appear as it does in the diagram.
+          </li>
+          <li>
+            Active area: Four squares framed by the neutral area which represent a 4-bit binary number.
+            Digits in this number will be represented by white for 0 and grey for 1. The number is to be
+            read first digit first; that is, the first digit read from the play area is the first digit in the
+            binary number.
+          </li>
+        </ol>
+        <p>
+          So, from the example diagram, if we read from bottom to top: Column 1 is 1001, Column 2 is 1110,
+          Column 3 is 0101, Column 4 is 1110, and Column 5 is 1011.
+        </p>
+        <hr>
+        <p class="center lead">
+          Challenge details are subject to minor change as ambiguities are eliminated and any concerns raised.
+        </p>
+      </section>
+    </article>
+
+    <article class="article-container">
+      <section>
+        <h2>Rules</h2>
+        <hr>
+        <ol>
+          <li>Teams may only use parts from their kits.</li>
+          <li>Teams can only use one touch, one ultrasonic, and one light/colour sensor.</li>
+          <li>Teams MUST have their Bluetooth turned off on their brick.</li>
+          <li>Robots must not be larger than 1 foot x 1 foot x 1 foot.</li>
+          <li>Teams will designate one person to end their run, and only that person may call the run.</li>
+        </ol>
+      </section>
+    </article>
+
+    <article class="article-container">
+      <section id="disqus">
+        <h2>Comments</h2>
+        {% include disqus.html %}
+      </section>
+    </article>
   </div>
 </div>

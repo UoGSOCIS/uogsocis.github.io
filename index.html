@@ -3,12 +3,12 @@ layout: default
 ---
 
 <div class="jumbotron">
-  <div class="container-fluid">
-    <div class="col-sm-4 col-sm-offset-1">
+  <div class="container">
+    <div class="col-sm-5">
       <img alt="SOCIS's Picture" class="img-responsive img-circle" src="/img/gravatar.jpg">
     </div>
 
-    <div class="col-sm-6">
+    <div class="hero col-sm-7">
       <h1>SOCIS</h1>
       <hr>
       <p class="lead">We are the Society of Computing and Information
@@ -16,19 +16,20 @@ layout: default
       of Computer Science. We run community building events from Hackathons
       to LANs. We also run one of the largest College Royale events,
       Roboticon. Come join us in the SOCIS office, Reynolds 102, anytime.</p>
-      <small class="pull-right">Front of Reynolds, by <a href="http://www.flickr.com/photos/jswaby/299521902/" target="_blank">Jason Swaby</a> 
+      <small class="pull-right">Front of Reynolds, by <a href="http://www.flickr.com/photos/jswaby/299521902/" target="_blank">Jason Swaby</a>
       <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/deed.en" target="_blank">(by-nc-nd)</a></small>
     </div>
   </div>
 </div>
 
-<div class="container-fluid">
+<div id="content" class="container">
   <div id="callouts" class="row">
-    <div class="col-sm-3 col-sm-offset-1">
-      <div class="icon-div">
-        <a href="http://www.socs.uoguelph.ca/"><i class="fa fa-laptop"></i></a>
+    <div class="col-sm-4 col-xs-12">
+
+      <div class="home-section">
+        <a href="http://www.socs.uoguelph.ca/"><i class="fa fa-code"></i></a>
+        <h4>Computer Science</h4>
       </div>
-      <h4>Computer Science</h4>
       <hr>
 
       <p class="text-center">
@@ -36,13 +37,16 @@ layout: default
       </p>
       <hr class="visible-xs">
     </div>
-    <div class="col-sm-4">
-      <div class="icon-div">
+
+    <div class="col-sm-4 col-xs-12">
+      <div class="home-section">
         <a href="/events/"><i class="fa fa-calendar"></i></a>
+        <h4>Events Feed</h4>
       </div>
-      <h4>Events Feed</h4>
       <hr>
+      {% assign emptyEventSchedule = true %}
       {% assign curDate = site.time | date: '%s' %}
+
       {% for post in site.posts reversed %}
         {% assign postDate = post.date | date: '%s' %}
         {% if post.categories contains 'events' and postDate >= curDate %}
@@ -52,15 +56,27 @@ layout: default
               <p style="text-align: right;">{{ post.date | date: '%B %-d,' }} {{ post.event_time }}</p>
             </div>
           </div>
+          {% assign emptyEventSchedule = false %}
         {% endif %}
       {% endfor %}
+
+      {% if emptyEventSchedule %}
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="text-center">
+              There are not currently any upcoming events. Check out the <a target="_blank" href="{{ site.facebook_url }}">Facebook</a> and <a target="_blank" href="{{ site.twitter_url }}">Twitter</a> feeds to keep yourself up to date about all SOCIS news!
+            </p>
+          </div>
+        </div>
+      {% endif %}
       <hr class="visible-xs">
     </div>
-    <div class="col-sm-3">
-      <div class="icon-div">
-        <a href="https://www.facebook.com/groups/UoGSOCIS/"><i class="fa fa-users"></i></a>
+
+    <div class="col-sm-4 col-xs-12">
+      <div class="home-section">
+        <a href="{{ site.facebook_url }}"><i class="fa fa-users"></i></a>
+        <h4>Community Building</h4>
       </div>
-      <h4>Community Building</h4>
       <hr>
       <p class="text-center">
         We run events throughout the year to build the community in the

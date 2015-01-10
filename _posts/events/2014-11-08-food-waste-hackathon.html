@@ -4,15 +4,15 @@ title: "Food Waste Hackathon"
 categories: [events]
 event_time: "8:30am - November 9, 4:00pm"
 ---
-<div class="container-fluid">
-  <div class= "col-md-8 col-md-offset-2">
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
     <article class="article-container">
-      <header>
+      <div>
         <h2 class="title indent">{{ page.title }}</h2>
         <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
         <p>Location: <a href="http://www.uoguelph.ca/campus/map/sciencecomplex/">Summerlee Science Atrium</a></p>
         <hr>
-      </header>
+      </div>
 
       <p>
         <a href="https://feedingninebillion.com/">Feeding Nine Billion</a> in association with the Food Institute of the University of Guelph and SOCIS, presents the <a href="http://www.eventbrite.ca/e/food-waste-hackathon-tickets-13091901229">Food Waste Hackathon</a>.
@@ -36,9 +36,11 @@ event_time: "8:30am - November 9, 4:00pm"
       </p>
     </article>
 
-    <section id="disqus">
-      <h2 class="indent title">Comments</h2>
-      {% include disqus.html %}
-    </section>
+    <article class="article-container">
+      <section id="disqus">
+        <h2 class="indent title">Comments</h2>
+        {% include disqus.html %}
+      </section>
+    </article>
   </div>
 </div>

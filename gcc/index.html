@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div class="container-fluid">
-  <div class="col-md-6 col-md-offset-3">
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
     <article class="article-container">
       <h2>Guelph Coding Community</h2>
       <hr>
@@ -14,10 +14,12 @@ layout: default
       </p>
     </article>
 
-    {% assign curDate = site.time | date: '%s' %}
     <article class="article-container">
       <h2>Upcoming Events</h2>
       <hr>
+      {% assign emptyEventSchedule = true %}
+      {% assign curDate = site.time | date: '%s' %}
+
       {% for post in site.posts reversed %}
         {% assign postDate = post.date | date: '%s' %}
         {% if post.categories contains 'events' and post.categories contains 'gcc' and postDate >= curDate %}
@@ -28,6 +30,12 @@ layout: default
           <hr class="grey hide-last">
         {% endif %}
       {% endfor %}
+
+      {% if emptyEventSchedule %}
+        <p>
+          There are not currently any upcoming GCC events. Check out the <a target="_blank" href="{{ site.facebook_url }}">Facebook</a> and <a target="_blank" href="{{ site.twitter_url }}">Twitter</a> feeds to keep yourself up to date about all SOCIS news!
+        </p>
+      {% endif %}
     </article>
     <article class="article-container">
       <h2>Past Events</h2>

@@ -4,15 +4,15 @@ title: "SOCS BBQ"
 category: events
 event_time: "5:00pm-8:00pm"
 ---
-<div class="container-fluid">
-  <div class= "col-md-8 col-md-offset-2">
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
     <article class="article-container">
-      <header>
+      <div>
         <h2 class="title indent">{{ page.title }}</h2>
         <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
         <p>Location: <a href="http://www.uoguelph.ca/campus/map/johnstongreen/">Johnston Green</a></p>
         <hr>
-      </header>
+      </div>
 
       <p>
         Celebrate the start of the university year by joining us for some great food, cotton candy,
@@ -22,9 +22,11 @@ event_time: "5:00pm-8:00pm"
       </p>
     </article>
 
-    <section id="disqus">
-      <h2 class="indent title">Comments</h2>
-      {% include disqus.html %}
-    </section>
+    <article class="article-container">
+      <section id="disqus">
+        <h2 class="indent title">Comments</h2>
+        {% include disqus.html %}
+      </section>
+    </article>
   </div>
 </div>

@@ -6,15 +6,15 @@ event_time: "7:00pm-9:00pm"
 speakers: "Luis Gustavo Pampolini, Sebastian Lenartowicz and Julian Horvat"
 files: "none"
 ---
-<div class="container-fluid">
-  <div class= "col-md-8 col-md-offset-2">
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
     <article class="article-container">
-      <header>
+      <div>
         <h2 class="title indent">{{ page.title }}</h2>
         <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
         <p>Location: <a href="http://www.uoguelph.ca/campus/map/reynolds/">Reynolds 114 (Mac Lab)</a></p>
         <hr>
-      </header>
+      </div>
 
       <p>
         GCC Tech Talks are events designed to showcase what your fellow students in SOCS are doing and maybe to even share some knowledge.
@@ -31,9 +31,11 @@ files: "none"
       {% endif %}
     </article>
 
-    <section id="disqus">
-      <h2 class="indent title">Comments</h2>
-      {% include disqus.html %}
-    </section>
+    <article class="article-container">
+      <section id="disqus">
+        <h2 class="indent title">Comments</h2>
+        {% include disqus.html %}
+      </section>
+    </article>
   </div>
 </div>

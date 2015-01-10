@@ -4,24 +4,26 @@ title: "Intro to the Raspberry PI"
 category: events
 event_time: "3:00pm-4:00pm"
 ---
-<div class="container-fluid">
-  <div class= "col-md-8 col-md-offset-2">
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
     <article class="article-container">
-      <header>
+      <div>
         <h2 class="title indent">{{ page.title }}</h2>
         <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
         <p>Location: <a href="http://www.uoguelph.ca/campus/map/thornbrough/">Thornborough Atrium</a></p>
         <hr>
-      </header>
+      </div>
 
       <p>Let's explore the awesome new microcomputer you'll be using for Introduction to Computing.</p>
       <br />
       <p><b>Postponed: </b> Due to the delay of the shipping for the Raspberry PIs, this event will be postponed until after CIS*1500 students have access to their PIs. <b>However,</b> for anyone who still wants to attend the event at this time, Ryan and Nick from the exec team will still be available at the Thornborough Atrium as originally planned.
     </article>
 
-    <section id="disqus">
-      <h2 class="indent title">Comments</h2>
-      {% include disqus.html %}
-    </section>
+    <article class="article-container">
+      <section id="disqus">
+        <h2 class="indent title">Comments</h2>
+        {% include disqus.html %}
+      </section>
+    </article>
   </div>
 </div>

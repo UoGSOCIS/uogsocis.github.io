@@ -3,6 +3,8 @@ title: Your awesome title
 email: exec@socis.ca
 description: ""
 url: "http://uogsocis.github.io"
+facebook_url: "https://www.facebook.com/groups/UoGSOCIS/"
+twitter_url: "https://twitter.com/uogsocis"
 
 # Build settings
 markdown: redcarpet
