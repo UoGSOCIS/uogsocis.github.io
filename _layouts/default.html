@@ -22,7 +22,11 @@
     <link href="//atom.xml" rel="alternate" title="SOCIS" type="application/atom+xml">
 </head>
 
-<body>
+{% if page.background == "white" %}
+    <body style="background-color: #FFF;">
+{% else %}
+    <body>
+{% endif %}
     <div id="wrap">
         {% include header.html %}
         {{ content }}
