@@ -19,7 +19,6 @@
     <meta property="og:url" content="http://socis.ca" />
     <meta property="og:image" content="img/gravatar.jpg" />
 
-    <link href="http://socis.ca" rel="canonical">
     <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
