@@ -3,14 +3,17 @@ layout: default
 ---
 
 <div class="container">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-10 col-md-offset-1">
     <article class="article-container">
       <h2>Guelph Coding Community</h2>
       <hr>
       <p>
-        The Guelph Coding Community has been organizing student run Tech Talks since 2013. They are typically held every other Wednesday night at 7:00pm in the Reynold's Mac Lab during the Fall and Winter semesters. Check the site for upcoming sessions and information about the speakers and their topics.
+        The Guelph Coding Community has been organizing student run Tech Talks since 2013. GCC talks are currently being held every other Thursday night at 5:30pm in the THRN 2420 Mac Lab. Check the site for upcoming sessions and information about the speakers and their topics.
         <br><br>
-        If you would like to give your own talk during a GCC event, feel free to email the <a href="mailto:exec@socis.ca">SOCIS Exec team</a>. We would love to hear about your area of interest.
+        If you would like to give your own talk during a GCC event, feel free to <a href="mailto:gcc@socis.ca">email</a> the GCC organizers!
+      </p>
+      <p>
+        There is a sign-up page for the Winter 2018 sessions located <a href="https://docs.google.com/spreadsheets/d/1BlKlG3LtAWAS5sPW7W9_UavsgqQGCXpj6hy33vdagMQ/edit?usp=sharing" target="_blank">here</a>.
       </p>
     </article>
 
@@ -32,9 +35,10 @@ layout: default
       {% endfor %}
 
       {% if emptyEventSchedule %}
-        <p>
+         <iframe width="100%" height="500" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlOy0YpjNMAwW4GPfbY3nO2W-GokaqpdWvoXOCfop6qNhEMoHhE0QXcE7Pif7NURKSnCvU2oGub2-I/pubhtml?gid=634347005&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <!--<p>
           There are not currently any upcoming GCC events. Check out the <a target="_blank" href="{{ site.facebook_url }}">Facebook</a> and <a target="_blank" href="{{ site.twitter_url }}">Twitter</a> feeds to keep yourself up to date about all SOCIS news!
-        </p>
+        </p>-->
       {% endif %}
     </article>
     <article class="article-container">
