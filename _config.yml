@@ -10,3 +10,4 @@ twitter_url: "https://twitter.com/uogsocis"
 markdown: redcarpet
 permalink: /posts/:year/:month/:day/:title
 timezone: America/New_York
+future: true
