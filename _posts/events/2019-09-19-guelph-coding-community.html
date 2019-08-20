@@ -1,0 +1,43 @@
+---
+layout: default
+title: "GCC - MLH Localhost: Docker Workshop"
+categories: [events, gcc]
+event_time: "6:00pm-7:00pm"
+speakers: "Ori Talmor"
+files: "none"
+---
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
+    <article class="article-container">
+      <div>
+        <h2 class="title indent">{{ page.title }}</h2>
+        <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
+        <p>Location: <a href="http://www.uoguelph.ca/campus/map/reynolds/">Reynolds 0002</a></p>
+        <hr>
+      </div>
+
+      <p>
+        GCC Tech Talks are events designed to showcase what your fellow students in SoCS are doing and maybe to even share some knowledge. We've got three awesome talks lined up:
+      </p>
+      <br>
+      <p>
+       Have you heard about the mystical realm of devops? Ori will be running a workshop on how to use docker. Bring a computer
+        with docker installed on it, if you dont have one we will try to have server setup that you can connect to.
+      </p>
+      <br>
+      <br>
+      <p>As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!</p>
+      {% if page.files != "none" %}
+        <hr class="grey">
+        <a class="view-event-files" target="_blank" href="{{ page.files }}">View Presentations on Google Drive</a>
+      {% endif %}
+    </article>
+
+    <article class="article-container">
+      <section id="disqus">
+        <h2 class="indent title">Comments</h2>
+        {% include disqus.html %}
+      </section>
+    </article>
+  </div>
+</div>
