@@ -4,7 +4,13 @@ title: "Guelph Coding Community Tech Talks"
 categories: [events, gcc]
 event_time: "7:00pm-9:00pm"
 speakers: "Anuj Bhatia, Hugo Possani and Andrew Welton"
-files: "https://drive.google.com/folderview?id=0B22nHCJ9j4kTTUtkOFpCaW5SRHc&usp=sharing"
+files:
+    - slides: "https://docs.google.com/presentation/d/1JaePMyALateaOp0Hw2SCKlK0iwEDNAkqKxMLSk9tuPQ/edit?usp=sharing"
+      author: "Andrew Welton"
+    - slides: "https://drive.google.com/file/d/0B22nHCJ9j4kTS3Z2ZF8tZERCNDQ/view?usp=sharing"
+      author: "Anuj Bhatia"
+    - slides: "https://docs.google.com/presentation/d/1GutwgQUH1oDMbmKEmAGBUyh5I9EUV1TAYjqcpyayVz4/edit?usp=sharing"
+      author: "Hugo Possani"
 ---
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
@@ -23,10 +29,21 @@ files: "https://drive.google.com/folderview?id=0B22nHCJ9j4kTTUtkOFpCaW5SRHc&usp=
       <p>Anuj Bhatia: The goal of the presentation is to teach people about creating their own WordPress theme instead of buying ones or using free ones which can be difficult to customize because you don't know their code. I want to show them how to organize their code in order for Wordpress to recognize it.</p>
       <p>Hugo Possani: A talk about sonification, a project to help teach the blind mathematical and statistical concepts through the use of technology and audio.</p>
       <p>As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!</p>
-      {% if page.files != "none" %}
+
+      {% if page.files %}
         <hr class="grey">
-        <a class="view-event-files" target="_blank" href="{{ page.files }}">View Presentations on Google Drive</a>
       {% endif %}
+
+      <div id="slides">
+      {% for file in page.files %}
+        {% if file.folder %}
+            <a class="view-event-folder" target="_blank" href="{{ file.folder }}">View folder {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% elsif file.slides %}
+            <a class="view-event-slides" target="_blank" href="{{ file.slides }}">View Presentations slides {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% endif %}
+      {% endfor %}
+      </div>
+
     </article>
 
     <article class="article-container">

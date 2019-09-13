@@ -252,8 +252,16 @@ footer {
 }
 
 /* Link to google drive on an event page */
-.view-event-files {
+.view-event-folder {
     background: url('../img/folder.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 12px 0 10px 50px;
+    font-weight: bold;
+}
+.view-event-slides {
+    background: url('../img/slides.png');
     background-size: 40px 40px;
     background-repeat: no-repeat;
     display: block;

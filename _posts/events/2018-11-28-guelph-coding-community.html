@@ -3,8 +3,14 @@ layout: default
 title: "Guelph Coding Community Tech Talks"
 categories: [events, gcc]
 event_time: "7:00pm-9:00pm"
-speakers: "Marshall Asch,Ryan Taylor and Jacob Knarr"
-files: "https://drive.google.com/drive/folders/1sowKFKBL6Dtuu_2SIzRui2mkmU1yH6kS?usp=sharing"
+speakers: "Marshall Asch, Ryan Taylor, and Jacob Knarr"
+files:
+    - slides: "https://docs.google.com/presentation/d/1y9hjnAbdH3CsGSAS_5XDnKx-YqV0EYxU4Sk9GdkhkQI/edit?usp=sharing"
+      author: "Marshall Asch"
+    - slides: "https://docs.google.com/presentation/d/16dsE3g3yIiDFEKRf8TwZcYys1ZVnZWhjKUMMvW_aYeY/edit?usp=sharing"
+      author: "Ryan Taylor"
+    - slides: "https://docs.google.com/presentation/d/1y7BSrpbQ-AasXNan8TiK_39FQY04LpbmsMSh7b1l-4A/edit?usp=sharing"
+      author: "Jacob Knarr"
 ---
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
@@ -27,10 +33,20 @@ files: "https://drive.google.com/drive/folders/1sowKFKBL6Dtuu_2SIzRui2mkmU1yH6kS
       <p>Jacob Knarr will be talking about Fragments and Dialogs in Android Development.</p>
       <br>
       <p>As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!</p>
-      {% if page.files != "none" %}
+      {% if page.files %}
         <hr class="grey">
-        <a class="view-event-files" target="_blank" href="{{ page.files }}">View Presentations on Google Drive</a>
       {% endif %}
+
+      <div id="slides">
+      {% for file in page.files %}
+        {% if file.folder %}
+            <a class="view-event-folder" target="_blank" href="{{ file.folder }}">View folder {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% elsif file.slides %}
+            <a class="view-event-slides" target="_blank" href="{{ file.slides }}">View Presentations slides {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% endif %}
+      {% endfor %}
+      </div>
+
     </article>
 
     <article class="article-container">
