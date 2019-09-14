@@ -48,8 +48,8 @@ layout: default
                   <p>Presenters: {{ post.speakers }}</p>
                 </div>
                 <div class="col-lg-6">
-                  {% if post.files != "none" %}
-                    <a class="view-past-gcc-event-files" target="_blank" href="{{ post.files }}">View Presentations</a>
+                  {% if post.files  %}
+                    <a class="view-past-gcc-event-files" target="_blank" href="{{ post.url }}#slides">View Presentations</a>
                   {% endif %}
                 </div>
               </div>

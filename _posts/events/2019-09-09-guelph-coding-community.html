@@ -4,7 +4,8 @@ title: "GCC - Intro to BASH and git"
 categories: [events, gcc]
 event_time: "5:30pm-6:30pm"
 speakers: "Marshall Asch"
-files: "https://docs.google.com/presentation/d/1QupJwEoIhAnymkUQ4gepa8JnQ7j-bQCfgnNEU8IJwX8/edit?usp=sharing"
+files:
+    - slides: "https://docs.google.com/presentation/d/1QupJwEoIhAnymkUQ4gepa8JnQ7j-bQCfgnNEU8IJwX8/edit?usp=sharing"
 ---
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
@@ -29,10 +30,21 @@ files: "https://docs.google.com/presentation/d/1QupJwEoIhAnymkUQ4gepa8JnQ7j-bQCf
       <br>
       <br>
       <p>As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!</p>
-      {% if page.files != "none" %}
+
+      {% if page.files %}
         <hr class="grey">
-        <a class="view-event-files" target="_blank" href="{{ page.files }}">View Presentations on Google Drive</a>
       {% endif %}
+
+      <div id="slides">
+      {% for file in page.files %}
+        {% if file.folder %}
+            <a class="view-event-folder" target="_blank" href="{{ file.folder }}">View folder {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% elsif file.slides %}
+            <a class="view-event-slides" target="_blank" href="{{ file.slides }}">View Presentations slides {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% endif %}
+      {% endfor %}
+      </div>
+
     </article>
 
     <article class="article-container">

@@ -4,7 +4,13 @@ title: "Guelph Coding Community Tech Talks"
 categories: [events, gcc]
 event_time: "7:00pm-9:00pm"
 speakers: "Daniel Robinson, Max Gomes and Alex Pennells"
-files: "https://drive.google.com/folderview?id=0B22nHCJ9j4kTTlBmNkJIdTFUeVU&usp=sharing"
+files:
+    - slides: "https://drive.google.com/file/d/0B9DDeOOQGAPkQTZ3YnVmZlpfWkE/view?usp=sharing"
+      author: "Daniel Robinson"
+    - slides: "https://drive.google.com/file/d/0B9DDeOOQGAPkSU9HNHgxWVJFR0U/view?usp=sharing"
+      author: "Alex Pennells"
+    - folder: "https://drive.google.com/drive/folders/0B9DDeOOQGAPkXy0wXzNKOHdOTkk?usp=sharing"
+      author: "Max Gomes"
 ---
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
@@ -27,10 +33,22 @@ files: "https://drive.google.com/folderview?id=0B22nHCJ9j4kTTlBmNkJIdTFUeVU&usp=
       <p>SOCIS's own Alex Pennells will be talking about how we run socis.ca and how you can apply those concepts to your own personal site.</p>
       <br>
       <p>As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!</p>
-      {% if page.files != "none" %}
+
+      {% if page.files %}
         <hr class="grey">
-        <a class="view-event-files" target="_blank" href="{{ page.files }}">View Presentations on Google Drive</a>
       {% endif %}
+
+
+      <div id="slides">
+      {% for file in page.files %}
+        {% if file.folder %}
+            <a class="view-event-folder" target="_blank" href="{{ file.folder }}">View folder {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% elsif file.slides %}
+            <a class="view-event-slides" target="_blank" href="{{ file.slides }}">View Presentations slides {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% endif %}
+      {% endfor %}
+      </div>
+
     </article>
 
     <article class="article-container">
