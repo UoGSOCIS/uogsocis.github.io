@@ -11,6 +11,7 @@ $guelph-dark-red: #660000;
 $guelph-light-red: #990100;
 $guelph-yellow: #FDC82F;
 $guelph-orange: #FD9800;
+$guelph-hacktoberfest: #FF00AA;
 $white: #FFF;
 $black: #000;
 $dark-grey: #21201c;
@@ -95,8 +96,13 @@ header {
         -webkit-transition:color .2s ease-in;
     }
     a:hover {
-        color: $guelph-yellow;
+        color: $guelph-yellow !important;
         background-color: transparent !important;
+    }
+
+    // Special events
+    a.hacktoberfest {
+        color: $guelph-hacktoberfest;
     }
 
     .navbar {
