@@ -25,7 +25,7 @@ agree with how they affect the website.
 Installation
 ------------
 
-__1. Clone the Repo__
+__1. Clone the Repository
 
 Most people can probably figure this one out, but I'll leave it here to be safe.
 Run `git clone https://github.com/UoGSOCIS/uogsocis.github.io` somewhere locally on your computer to pull the site code from git.
