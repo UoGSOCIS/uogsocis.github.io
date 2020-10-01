@@ -1,8 +1,7 @@
 SOCIS Website
 ==================
 
-This is the official repository for the https://socis.ca website, a student built and maintained website. If you feel like joining in on the construction, feel free on cloning this repository and submitting some changes. Code is reviewed by the SOCIS exec (specifically the system and assistant system administrators) before it becomes live, so for new students, this could be your first experience with code review!
-
+This is the official store for the https://socis.ca site, an understudy fabricated and looked after site. On the off chance that you want to participate on the development, feel free on cloning this archive and presenting a few changes. Code is checked on by the SOCIS executive (explicitly the framework and associate framework chairmen) before it turns out to be live, so for new understudies, this could be your first involvement in code survey!
 
 Contributing
 ------------
