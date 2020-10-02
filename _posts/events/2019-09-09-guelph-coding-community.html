@@ -1,16 +1,11 @@
 ---
 layout: default
-title: "Guelph Coding Community Tech Talks"
+title: "GCC - Intro to BASH and git"
 categories: [events, gcc]
-event_time: "7:00pm-9:00pm"
-speakers: "Daniel Robinson, Max Gomes and Alex Pennells"
+event_time: "5:30pm-6:30pm"
+speakers: "Marshall Asch"
 files:
-    - slides: "https://drive.google.com/file/d/0B9DDeOOQGAPkQTZ3YnVmZlpfWkE/view?usp=sharing"
-      author: "Daniel Robinson"
-    - slides: "https://drive.google.com/file/d/0B9DDeOOQGAPkSU9HNHgxWVJFR0U/view?usp=sharing"
-      author: "Alex Pennells"
-    - folder: "https://drive.google.com/drive/folders/0B9DDeOOQGAPkXy0wXzNKOHdOTkk?usp=sharing"
-      author: "Max Gomes"
+    - slides: "https://docs.google.com/presentation/d/1QupJwEoIhAnymkUQ4gepa8JnQ7j-bQCfgnNEU8IJwX8/edit?usp=sharing"
 ---
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
@@ -18,26 +13,27 @@ files:
       <div>
         <h2 class="title indent">{{ page.title }}</h2>
         <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
-        <p>Location: <a href="http://www.uoguelph.ca/campus/map/reynolds/">Reynolds 114 (Mac Lab)</a></p>
+        <p>Location: <a href="http://www.uoguelph.ca/campus/map/reynolds/">Reynolds 1101</a></p>
         <hr>
       </div>
 
       <p>
-        GCC Tech Talks are events designed to showcase what your fellow students in SOCS are doing and maybe to even share some knowledge. For our first event this year we've got three awesome talks lined up:
+        GCC Tech Talks are events designed to showcase what your fellow students in SoCS are doing and maybe to even share some knowledge. We've got three awesome talks lined up:
       </p>
       <br>
-      <p>Daniel Robinson will be doing an intro to Ruby on Rails.</p>
+      <p>
+        Marshall Asch will be doing a workshop on how to use basic commandline commands and an introduction to git.
+        If you want to learn how to be one of the awesome people in movies who furiously press buttons on a keyboard while the FBI
+        stands behind them and they find the bad guys location on a map then this is the talk for you! Come with a laptop with a unix like
+        environment (Mac, Ubuntu, Debian, etc.) or with a way to connect to the school server.
+      </p>
       <br>
-      <p>Max Gomes is presenting his Arduino omni-directional robot.</p>
-      <br>
-      <p>SOCIS's own Alex Pennells will be talking about how we run socis.ca and how you can apply those concepts to your own personal site.</p>
       <br>
       <p>As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!</p>
 
       {% if page.files %}
         <hr class="grey">
       {% endif %}
-
 
       <div id="slides">
       {% for file in page.files %}

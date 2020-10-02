@@ -1,16 +1,11 @@
 ---
 layout: default
-title: "Guelph Coding Community Tech Talks"
+title: "GCC - MLH Localhost: Docker Workshop"
 categories: [events, gcc]
-event_time: "7:00pm-9:00pm"
-speakers: "Daniel Robinson, Max Gomes and Alex Pennells"
+event_time: "6:00pm-7:00pm"
+speakers: "Ori Talmor"
 files:
-    - slides: "https://drive.google.com/file/d/0B9DDeOOQGAPkQTZ3YnVmZlpfWkE/view?usp=sharing"
-      author: "Daniel Robinson"
-    - slides: "https://drive.google.com/file/d/0B9DDeOOQGAPkSU9HNHgxWVJFR0U/view?usp=sharing"
-      author: "Alex Pennells"
-    - folder: "https://drive.google.com/drive/folders/0B9DDeOOQGAPkXy0wXzNKOHdOTkk?usp=sharing"
-      author: "Max Gomes"
+  - slides: https://drive.google.com/file/d/1gOYf0qlQzUwKBHu9q0Is7gU0o72TNMVy/view?usp=sharing
 ---
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
@@ -18,26 +13,25 @@ files:
       <div>
         <h2 class="title indent">{{ page.title }}</h2>
         <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
-        <p>Location: <a href="http://www.uoguelph.ca/campus/map/reynolds/">Reynolds 114 (Mac Lab)</a></p>
+        <p>Location: <a href="http://www.uoguelph.ca/campus/map/reynolds/">Reynolds 0002</a></p>
         <hr>
       </div>
 
       <p>
-        GCC Tech Talks are events designed to showcase what your fellow students in SOCS are doing and maybe to even share some knowledge. For our first event this year we've got three awesome talks lined up:
+        GCC Tech Talks are events designed to showcase what your fellow students in SoCS are doing and maybe to even share some knowledge. We've got three awesome talks lined up:
       </p>
       <br>
-      <p>Daniel Robinson will be doing an intro to Ruby on Rails.</p>
+      <p>
+       Have you heard about the mystical realm of devops? Ori will be running a workshop on how to use docker. Bring a computer
+        with docker installed on it, if you dont have one we will try to have server setup that you can connect to.
+      </p>
       <br>
-      <p>Max Gomes is presenting his Arduino omni-directional robot.</p>
-      <br>
-      <p>SOCIS's own Alex Pennells will be talking about how we run socis.ca and how you can apply those concepts to your own personal site.</p>
       <br>
       <p>As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!</p>
 
       {% if page.files %}
         <hr class="grey">
       {% endif %}
-
 
       <div id="slides">
       {% for file in page.files %}

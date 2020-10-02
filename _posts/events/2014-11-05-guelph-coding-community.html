@@ -4,7 +4,9 @@ title: "Guelph Coding Community Tech Talks"
 categories: [events, gcc]
 event_time: "7:00pm-9:00pm"
 speakers: "Luis Gustavo Pampolini, Sebastian Lenartowicz and Julian Horvat"
-files: "https://drive.google.com/a/socis.ca/folderview?id=0B7SbmDOkhbl1Z1h6THRBUWhvaEE&usp=sharing"
+files:
+    - slides: "https://drive.google.com/file/d/0B7SbmDOkhbl1VGRvYWM3Yk9CZzA/view?usp=sharing"
+      author: "Sebastian Lenartowicz"
 ---
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
@@ -31,10 +33,21 @@ files: "https://drive.google.com/a/socis.ca/folderview?id=0B7SbmDOkhbl1Z1h6THRBU
       <p>
         As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!
       </p>
-      {% if page.files != "none" %}
+
+      {% if page.files %}
         <hr class="grey">
-        <a class="view-event-files" target="_blank" href="{{ page.files }}">View Presentations on Google Drive</a>
       {% endif %}
+
+      <div id="slides">
+      {% for file in page.files %}
+        {% if file.folder %}
+            <a class="view-event-folder" target="_blank" href="{{ file.folder }}">View folder {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% elsif file.slides %}
+            <a class="view-event-slides" target="_blank" href="{{ file.slides }}">View Presentations slides {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+        {% endif %}
+      {% endfor %}
+      </div>
+
     </article>
 
     <article class="article-container">

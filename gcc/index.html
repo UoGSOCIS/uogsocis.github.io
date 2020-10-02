@@ -8,13 +8,13 @@ layout: default
       <h2>Guelph Coding Community</h2>
       <hr>
       <p>
-        The Guelph Coding Community has been organizing student run Tech Talks since 2013. GCC talks are currently being held every other Thursday night at 5:30pm in the THRN 2420 Mac Lab. Check the site for upcoming sessions and information about the speakers and their topics.
+        The Guelph Coding Community has been organizing student run Tech Talks since 2013. GCC talks are currently being held every Monday night at 5:30pm in REYN 1101. Check the site for upcoming sessions and information about the speakers and their topics.
         <br><br>
-        If you would like to give your own talk during a GCC event, feel free to <a href="mailto:gcc@socis.ca">email</a> the GCC organizers!
+        If you would like to give your own talk during a GCC event, feel free to <a href="mailto:gcc@socis.ca">email</a> the GCC organizers, or fill out the form below!
       </p>
-      <p>
-        There is a sign-up page for the Winter 2018 sessions located <a href="https://docs.google.com/spreadsheets/d/1BlKlG3LtAWAS5sPW7W9_UavsgqQGCXpj6hy33vdagMQ/edit?usp=sharing" target="_blank">here</a>.
-      </p>
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdyu7Q5XaQi4vYdtUFyWGsKJdjxs19Ndt9dhbPHCt56xFO1-g/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
     </article>
 
     <article class="article-container">
@@ -33,13 +33,6 @@ layout: default
           <hr class="grey hide-last">
         {% endif %}
       {% endfor %}
-
-      {% if emptyEventSchedule %}
-         <iframe width="100%" height="500" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRlOy0YpjNMAwW4GPfbY3nO2W-GokaqpdWvoXOCfop6qNhEMoHhE0QXcE7Pif7NURKSnCvU2oGub2-I/pubhtml?gid=634347005&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-        <!--<p>
-          There are not currently any upcoming GCC events. Check out the <a target="_blank" href="{{ site.facebook_url }}">Facebook</a> and <a target="_blank" href="{{ site.twitter_url }}">Twitter</a> feeds to keep yourself up to date about all SOCIS news!
-        </p>-->
-      {% endif %}
     </article>
     <article class="article-container">
       <h2>Past Events</h2>
@@ -55,8 +48,8 @@ layout: default
                   <p>Presenters: {{ post.speakers }}</p>
                 </div>
                 <div class="col-lg-6">
-                  {% if post.files != "none" %}
-                    <a class="view-past-gcc-event-files" target="_blank" href="{{ post.files }}">View Presentations</a>
+                  {% if post.files  %}
+                    <a class="view-past-gcc-event-files" target="_blank" href="{{ post.url }}#slides">View Presentations</a>
                   {% endif %}
                 </div>
               </div>

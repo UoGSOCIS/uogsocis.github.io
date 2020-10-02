@@ -3,14 +3,14 @@ layout: default
 title: "Guelph Coding Community Tech Talks"
 categories: [events, gcc]
 event_time: "7:00pm-9:00pm"
-speakers: "Daniel Robinson, Max Gomes and Alex Pennells"
+speakers: "Marshall Asch, Ryan Taylor, and Jacob Knarr"
 files:
-    - slides: "https://drive.google.com/file/d/0B9DDeOOQGAPkQTZ3YnVmZlpfWkE/view?usp=sharing"
-      author: "Daniel Robinson"
-    - slides: "https://drive.google.com/file/d/0B9DDeOOQGAPkSU9HNHgxWVJFR0U/view?usp=sharing"
-      author: "Alex Pennells"
-    - folder: "https://drive.google.com/drive/folders/0B9DDeOOQGAPkXy0wXzNKOHdOTkk?usp=sharing"
-      author: "Max Gomes"
+    - slides: "https://docs.google.com/presentation/d/1y9hjnAbdH3CsGSAS_5XDnKx-YqV0EYxU4Sk9GdkhkQI/edit?usp=sharing"
+      author: "Marshall Asch"
+    - slides: "https://docs.google.com/presentation/d/16dsE3g3yIiDFEKRf8TwZcYys1ZVnZWhjKUMMvW_aYeY/edit?usp=sharing"
+      author: "Ryan Taylor"
+    - slides: "https://docs.google.com/presentation/d/1y7BSrpbQ-AasXNan8TiK_39FQY04LpbmsMSh7b1l-4A/edit?usp=sharing"
+      author: "Jacob Knarr"
 ---
 <div class="container">
   <div class="col-md-8 col-md-offset-2">
@@ -18,26 +18,24 @@ files:
       <div>
         <h2 class="title indent">{{ page.title }}</h2>
         <p>{{ page.date | date: '%B %d, %Y' }} {{ page.event_time }}</p>
-        <p>Location: <a href="http://www.uoguelph.ca/campus/map/reynolds/">Reynolds 114 (Mac Lab)</a></p>
+        <p>Location: <a href="http://www.uoguelph.ca/campus/map/reynolds/">Reynolds 1101</a></p>
         <hr>
       </div>
 
       <p>
-        GCC Tech Talks are events designed to showcase what your fellow students in SOCS are doing and maybe to even share some knowledge. For our first event this year we've got three awesome talks lined up:
+        GCC Tech Talks are events designed to showcase what your fellow students in SoCS are doing and maybe to even share some knowledge. We've got three awesome talks lined up:
       </p>
       <br>
-      <p>Daniel Robinson will be doing an intro to Ruby on Rails.</p>
+      <p>Marshall Asch will be doing a talk on Mobile Mesh Networks.</p>
       <br>
-      <p>Max Gomes is presenting his Arduino omni-directional robot.</p>
+      <p>Ryan Taylor is presenting his work on Analyzing Student Mental Health Based On Homework Using Text Clustering.</p>
       <br>
-      <p>SOCIS's own Alex Pennells will be talking about how we run socis.ca and how you can apply those concepts to your own personal site.</p>
+      <p>Jacob Knarr will be talking about Fragments and Dialogs in Android Development.</p>
       <br>
       <p>As always there will be plenty of time for socializing after the talks as well. Hope to see everyone there!</p>
-
       {% if page.files %}
         <hr class="grey">
       {% endif %}
-
 
       <div id="slides">
       {% for file in page.files %}
