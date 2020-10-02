@@ -11,12 +11,13 @@ We welcome pull requests and issues but will be strict in our enforcing of
 proper programming styles on any submitted code.
 
 In order to contribute, please fork this repository and submit a pull request
-to our master branch. Our admin will review the request and inform you of any
+to our `main` branch. Our maintainers will review the request and inform you of any
 changes that need to be made before the merge.
 
 If you are building a large feature, discuss it with us first, and make
-multiple small commits. If you submit a single monolithic commit, we will
-likely reject it and ask that you split it up.
+multiple small commits. Ideally the feature should have an issue, possibly with
+subtasks. If you submit a single monolithic commit, we will likely reject it and
+ask that you split it up.
 
 We reserve the right to reject pull requests and close issues if we do not
 agree with how they affect the website.
