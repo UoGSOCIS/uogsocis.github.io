@@ -1,122 +1,226 @@
-<div class="container">
-    <div class="col-md-8 col-md-offset-2">
-        <article class="article-container">
-            <h2>{{club.title}}</h2>
-            <hr>
-            <section>
-                <p>
-                    We are a group of Computer Science students dedicated to bettering the coding community at the
-                    University of Guelph. We work closely with the <a href="http://www.socs.uoguelph.ca/">School of
-                        Computer Science</a> in planning the future of our program with our focus on benefiting
-                    students. We also run community building events, tutorials and maintain the SOCIS office in Reynolds
-                    0010.
-                </p>
-            </section>
-            <hr class="grey">
-            <section>
-                <h3>2019-2020 Executive</h3>
-                <ul>
-                    <li><a href="mailto:president@socis.ca">President</a> - <strong>Sooraj Modi</strong></li>
-                    <li><a href="mailto:vp-internal@socis.ca">VP Internal</a> - <strong>Dema Abuadas</strong></li>
-                    <li><a href="mailto:vp-external@socis.ca">VP External</a> - <strong>Ori Talmor</strong></li>
-                    <li><a href="mailto:vp-finance@socis.ca">VP Finance</a> - <strong>Tony Trinh</strong></li>
-                    <li><a href="mailto:vp-communications@socis.ca">VP Communications</a> - <strong>Parth
-                            Miglani</strong></li>
-                    <li><a href="mailto:secretary@socis.ca">Secretary</a> - <strong>Keefer Rourke</strong></li>
-                    <li><a href="mailto:admin@socis.ca">System Admin</a> - <strong>Marshall Asch</strong></li>
-                    <li><a href="mailto:first-year-rep@socis.ca">First Year Representative</a> - <strong>Ryan
-                            Sheppard</strong></li>
-                    <li><a href="mailto:student-rep@socis.ca">Student Representative</a> - <strong>Chhvi Gupta</strong>
-                    </li>
-                    <li><a href="mailto:student-rep@socis.ca">Student Representative</a> - <strong>Ben Pearo</strong>
-                    </li>
-                </ul>
-            </section>
-            <hr class="grey">
-            <section>
-                <h3>Our Role in the School of Computer Science</h3>
-                <p>
-                    Computer Science students have a voice inside the department and that
-                    voice is SOCIS. At least one of our executives is at every department
-                    meeting to give student input on the topics discussed. This has far
-                    reaching effects on important topics like the future curriculum provided to CS and S.
-                    ENG majors.
-                </p>
-                <p>
-                    In addition, we also help the department to run events like the annual SOCS
-                    barbeque held every year in September to help welcome first year CS
-                    students to the University.
-                </p>
-            </section>
-            <hr class="grey">
-            <section>
-                <h3>Connect with us!</h3>
-                <a class="about-social-btn" target="_blank" href="https://www.facebook.com/groups/UoGSOCIS/"><i
-                        class="fab fa-facebook-square"></i></a>
-                <a href="https://www.facebook.com/groups/UoGSOCIS/">Join our Facebook group.</a><br>
-                <a class="about-social-btn" target="_blank" href="https://twitter.com/uogsocis"><i
-                        class="fab fa-twitter-square"></i></a>
-                <a href="https://twitter.com/uogsocis">Follow us on Twitter.</a><br>
-                <a class="about-social-btn" target="_blank" href="https://www.instagram.com/socis.uog/"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.instagram.com/socis.uog/">Follow us on Instagram.</a>
-            </section>
-        </article>
-        <section class="article-container">
-            <h2>Events</h2>
-            <hr>
-            <p class="lead">We run events to bring CS students closer together.</p>
-            <p>Every year SOCIS runs a number of events like Hackathons, LANs
-                and movie nights that help to bring CS students closer together and build
-                community in our small but growing College. You can keep up to date on
-                these events through this site, our Facebook <a
-                    href="https://www.facebook.com/groups/UoGSOCIS/">group</a>,
-                or our <a href="https://gryph.slack.com">slack</a> channel #SOCIS.</p>
 
-            <hr class="grey">
-            <p class="lead">CS Games</p>
-            <p>
-                Each year we send team(s) to compete in the <a href="http://csgames.org/">CS Games</a>,
-                a computer science competition meant for university students from around North America.
-                Competitions range from Computer Science related activities such as debugging or AI, to
-                more non-computer related festivities like sports or video games.
-            </p>
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="SOCIS" name="author">
+    <meta content="Computer Science We are a group of computer science students for computer science students. We coordinate with the School of Computer Science in …" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <hr class="grey">
-            <p class="lead">CUSEC</p>
-            <p>
-                At the beginning of each year we raise the funding necessary to send students to the
-                annual <a href="http://cusec.net/">CUSEC conference</a>. Whether students are interested in
-                the event speakers, the on-site hackathon or simply just want to find a potential employer,
-                CUSEC can offer them the best opportunities. Due to the conference being sponsored by the likes
-                of Google, Microsoft, Amazon and more (all of which attend looking to hire), CUSEC is one
-                of the best places for computer science students to go job hunting.
-            </p>
+    <title>
+        {% if page.title %}
+            {{ page.title }}
+        {% else %}
+            SOCIS - University of Guelph
+        {% endif %}
+    </title>
 
-            <hr class="grey">
-            <p class="lead">Roboticon</p>
-            <p>
-                Finally, every year SOCIS students are the driving force behind one of the
-                largest <a href="www.collegeroyalsociety.com">College Royale</a>
-                events, <a href="/roboticon/">Roboticon</a>.
-            </p>
-        </section>
+    <meta property="og:title" content="SOCIS - University of Guelph" />
+    <meta property="og:description" content="We are the Society of Computing and Information Science, a student organization for the University of Guelph's School of Computer Science." />
+    <meta property="og:url" content="http://socis.ca" />
+    <meta property="og:image" content="http://socis.ca/img/gravatar.jpg" />
 
-        <section class="article-container">
-            <p class="lead">Constitution</p>
+    <link href="http://socis.ca" rel="canonical">
 
-            <embed src="SOCIS Constitution.pdf" width="650" height="500" alt="pdf"
-                pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-            <p>Last Updated: April 7th, 2019</p>
-        </section>
-        <section class="article-container">
-            <h2>Contact Us</h2>
-            <hr>
-            <p>If you want to get in touch with us you can send us an email at
-                <a href="mailto:exec@socis.ca">exec@socis.ca</a>.<br>
-                You can also join our <a href="https://www.facebook.com/groups/UoGSOCIS/">Facebook group</a>.<br>
-            </p>
-        </section>
+
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="//atom.xml" rel="alternate" title="SOCIS" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="wrap">
+        {% include header.html %}
+        <div class="container">
+            <div class="col-md-12">
+                <article class="article-container">
+                    <div>
+                        <h2 class="title indent">{{ page.title }}</h2>
+                        <h3>{{ page.about }}</h3>
+                    </div>
+                    {% if page.exec %}
+                    <section>
+                        <h3> {{page.year-range}} Executive Team </h3>
+                        <ul>
+                            {% for exec in page.exec %}
+                            <li><a href="mailto:{{exec.email}}">{{ exec.position }}</a> - <strong>{{ exec.name }}</strong></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    {% endif %}
+                    {% if page.staff %}
+                    <section>
+                        <h3> {{page.year-range}} Staff </h3>
+                        <ul>
+                            {% for staff in page.staff %}
+                            <li><a href="mailto:{{staff.email}}">{{ staff.position }}</a> - <strong>{{ staff.name }}</strong></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    {% endif %}
+                    
+
+
+                    <!-- title -->
+                    <!-- tagline -->
+                    <!--    about -->
+                    <!-- custom -->
+                    <!-- socials -->
+                    <!-- pictures? -->
+
+                    <p>{{ content }}</p>
+                    {% if page.files %}
+                    <hr class="grey">
+                    {% endif %}
+
+                    <div id="slides">
+                        {% for file in page.files %}
+                        {% if file.folder %}
+                        <a class="view-event-folder" target="_blank" href="{{ file.folder }}">View folder
+                            {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+                        {% elsif file.slides %}
+                        <a class="view-event-slides" target="_blank" href="{{ file.slides }}">View Presentations
+                            slides {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+        <div id="push"></div>
     </div>
-</div>
+    
+
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+            <article class="article-container">
+                <h2>{{item.title}}</h2>
+                <hr>
+                <section>
+                    <p>
+                        We are a group of Computer Science students dedicated to bettering the coding community at the
+                        University of Guelph. We work closely with the <a href="http://www.socs.uoguelph.ca/">School of
+                            Computer Science</a> in planning the future of our program with our focus on benefiting
+                        students. We also run community building events, tutorials and maintain the SOCIS office in Reynolds
+                        0010.
+                    </p>
+                </section>
+                <hr class="grey">
+                <section>
+                    <h3>2019-2020 Executive</h3>
+                    <ul>
+                        <li><a href="mailto:president@socis.ca">President</a> - <strong>Sooraj Modi</strong></li>
+                        <li><a href="mailto:vp-internal@socis.ca">VP Internal</a> - <strong>Dema Abuadas</strong></li>
+                        <li><a href="mailto:vp-external@socis.ca">VP External</a> - <strong>Ori Talmor</strong></li>
+                        <li><a href="mailto:vp-finance@socis.ca">VP Finance</a> - <strong>Tony Trinh</strong></li>
+                        <li><a href="mailto:vp-communications@socis.ca">VP Communications</a> - <strong>Parth
+                                Miglani</strong></li>
+                        <li><a href="mailto:secretary@socis.ca">Secretary</a> - <strong>Keefer Rourke</strong></li>
+                        <li><a href="mailto:admin@socis.ca">System Admin</a> - <strong>Marshall Asch</strong></li>
+                        <li><a href="mailto:first-year-rep@socis.ca">First Year Representative</a> - <strong>Ryan
+                                Sheppard</strong></li>
+                        <li><a href="mailto:student-rep@socis.ca">Student Representative</a> - <strong>Chhvi Gupta</strong>
+                        </li>
+                        <li><a href="mailto:student-rep@socis.ca">Student Representative</a> - <strong>Ben Pearo</strong>
+                        </li>
+                    </ul>
+                </section>
+                <hr class="grey">
+                <section>
+                    <h3>Our Role in the School of Computer Science</h3>
+                    <p>
+                        Computer Science students have a voice inside the department and that
+                        voice is SOCIS. At least one of our executives is at every department
+                        meeting to give student input on the topics discussed. This has far
+                        reaching effects on important topics like the future curriculum provided to CS and S.
+                        ENG majors.
+                    </p>
+                    <p>
+                        In addition, we also help the department to run events like the annual SOCS
+                        barbeque held every year in September to help welcome first year CS
+                        students to the University.
+                    </p>
+                </section>
+                <hr class="grey">
+                <section>
+                    <h3>Connect with us!</h3>
+                    <a class="about-social-btn" target="_blank" href="https://www.facebook.com/groups/UoGSOCIS/"><i
+                            class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.facebook.com/groups/UoGSOCIS/">Join our Facebook group.</a><br>
+                    <a class="about-social-btn" target="_blank" href="https://twitter.com/uogsocis"><i
+                            class="fab fa-twitter-square"></i></a>
+                    <a href="https://twitter.com/uogsocis">Follow us on Twitter.</a><br>
+                    <a class="about-social-btn" target="_blank" href="https://www.instagram.com/socis.uog/"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/socis.uog/">Follow us on Instagram.</a>
+                </section>
+            </article>
+            <section class="article-container">
+                <h2>Events</h2>
+                <hr>
+                <p class="lead">We run events to bring CS students closer together.</p>
+                <p>Every year SOCIS runs a number of events like Hackathons, LANs
+                    and movie nights that help to bring CS students closer together and build
+                    community in our small but growing College. You can keep up to date on
+                    these events through this site, our Facebook <a
+                        href="https://www.facebook.com/groups/UoGSOCIS/">group</a>,
+                    or our <a href="https://gryph.slack.com">slack</a> channel #SOCIS.</p>
+    
+                <hr class="grey">
+                <p class="lead">CS Games</p>
+                <p>
+                    Each year we send team(s) to compete in the <a href="http://csgames.org/">CS Games</a>,
+                    a computer science competition meant for university students from around North America.
+                    Competitions range from Computer Science related activities such as debugging or AI, to
+                    more non-computer related festivities like sports or video games.
+                </p>
+    
+                <hr class="grey">
+                <p class="lead">CUSEC</p>
+                <p>
+                    At the beginning of each year we raise the funding necessary to send students to the
+                    annual <a href="http://cusec.net/">CUSEC conference</a>. Whether students are interested in
+                    the event speakers, the on-site hackathon or simply just want to find a potential employer,
+                    CUSEC can offer them the best opportunities. Due to the conference being sponsored by the likes
+                    of Google, Microsoft, Amazon and more (all of which attend looking to hire), CUSEC is one
+                    of the best places for computer science students to go job hunting.
+                </p>
+    
+                <hr class="grey">
+                <p class="lead">Roboticon</p>
+                <p>
+                    Finally, every year SOCIS students are the driving force behind one of the
+                    largest <a href="www.collegeroyalsociety.com">College Royale</a>
+                    events, <a href="/roboticon/">Roboticon</a>.
+                </p>
+            </section>
+    
+            <section class="article-container">
+                <p class="lead">Constitution</p>
+    
+                <embed src="SOCIS Constitution.pdf" width="650" height="500" alt="pdf"
+                    pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+    
+                <p>Last Updated: April 7th, 2019</p>
+            </section>
+            <section class="article-container">
+                <h2>Contact Us</h2>
+                <hr>
+                <p>If you want to get in touch with us you can send us an email at
+                    <a href="mailto:exec@socis.ca">exec@socis.ca</a>.<br>
+                    You can also join our <a href="https://www.facebook.com/groups/UoGSOCIS/">Facebook group</a>.<br>
+                </p>
+            </section>
+        </div>
+    </div>
+
+    {% include footer.html %}
+    {% include google-analytics.html %}
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>

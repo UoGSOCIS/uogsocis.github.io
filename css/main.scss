@@ -14,7 +14,8 @@ $guelph-orange: #FD9800;
 $white: #FFF;
 $black: #000;
 $dark-grey: #21201c;
-$light-grey: #898172;
+$light-grey: #CACACA;
+
 
 // Media device sizing
 $max-xs-width: 767px;
@@ -79,7 +80,7 @@ a:hover {
 
 header {
     background: $white;
-    border-bottom: 2px solid $guelph-yellow;
+    border-bottom: 2px solid $light-grey;
     position: relative;
     z-index: 2;
 
@@ -92,7 +93,7 @@ header {
         -webkit-transition:color .2s ease-in;
     }
     a:hover {
-        color: $guelph-yellow;
+        color: $light-grey;
         background-color: transparent !important;
     }
 

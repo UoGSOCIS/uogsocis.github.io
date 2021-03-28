@@ -3,10 +3,11 @@ layout: default
 ---
 
 <div class="container">
+  <h2>CLUBS</h2>
   <div class="col-md-8 col-md-offset-2">
-    {% for club in site.posts %}
-    {% if club.categories contains 'club' %}
-    <div><p>Yooo</p></div>
+    {% for item in site.posts %}
+    {% if item.categories contains 'club' %}
+    {% include club-card.html %}
     {% endif %}
     {% endfor %}
   </div>
