@@ -1,6 +1,14 @@
-<!-- <article class="card">
-  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-</article> -->
+<!-- 
+  This component uses an event's front matter details to display a preview of an events page.
+  Usage:
+  {% for post in site.posts %}
+    {% if post.categories contains 'events' %} -- can add "and" and "or" regarding any front matter
+      {% include event-card.html %}
+    {% endif %}
+  {% endfor %}
+  Check out other implementations of cards in this project for ideas on how to expand functionality and filtering
+ -->
+
 <div class="col-md-4">
   <div class="col-sm-6">
     <div class="card">
