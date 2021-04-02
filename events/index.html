@@ -40,7 +40,11 @@ layout: default-legacy
         {% for post in site.posts %}
         {% assign postDate = post.date | date: '%s' %}
         {% if post.categories contains 'events' and postDate < curDate %}
-        {% include event-card.html %}
+        <article>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.date | date: '%B %d, %Y' }} {{ post.event_time }}</p>
+        </article>
+        <hr class="grey hide-last">
         {% endif %}
       {% endfor %}
       </div>
