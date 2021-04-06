@@ -1,0 +1,23 @@
+{% comment %}
+  This component uses an event's front matter details to display a preview of an events page.
+  Usage:
+  {% for item in site.posts %}
+    {% if item.categories contains 'events' %} -- can add "and" and "or" regarding any front matter
+      {% include event-card.html %}
+    {% endif %}
+  {% endfor %}
+  Check out other implementations of cards in this project for ideas on how to expand functionality and filtering
+{% endcomment %}
+
+<div class="col-md-4">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">{{ item.date | date: '%B %d' }} {{ item.event_time }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+

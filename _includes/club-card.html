@@ -1,0 +1,19 @@
+{% comment %}
+  This component uses an club's front matter details to display a preview of an club page.
+  Usage:
+  {% for item in site.posts %}
+    {% if item.categories contains 'club' %} -- can add "and" and "or" regarding any front matter
+      {% include club-card.html %}
+    {% endif %}
+  {% endfor %}
+  Check out other implementations of cards in this project for ideas on how to expand functionality and filtering
+{% endcomment %}
+<article>
+    <div class="fluid-container past-gcc-event">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3><a href="{{ item.url }}">CLUB PAGE</a></h3>
+        </div>
+      </div>
+    </div>
+  </article>

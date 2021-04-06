@@ -14,7 +14,8 @@ $guelph-orange: #FD9800;
 $white: #FFF;
 $black: #000;
 $dark-grey: #21201c;
-$light-grey: #898172;
+$light-grey: #CACACA;
+
 
 // Media device sizing
 $max-xs-width: 767px;
@@ -51,7 +52,7 @@ html, body {
 }
 
 body {
-    background-color: $light-grey;
+    background-color: $white;
 }
 
 hr {
@@ -78,16 +79,13 @@ a:hover {
 /*===================================================*/
 
 header {
-    background: -webkit-linear-gradient($guelph-dark-red, $guelph-light-red);
-    background: -o-linear-gradient($guelph-dark-red, $guelph-light-red);
-    background: -moz-linear-gradient($guelph-dark-red, $guelph-light-red);
-    background: linear-gradient($guelph-dark-red, $guelph-light-red);
-    border-bottom: 2px solid $guelph-yellow;
+    background: $white;
+    border-bottom: 2px solid $light-grey;
     position: relative;
     z-index: 2;
 
     a {
-        color: $white;
+        color: $black;
         font-size: 14px;
 
         -moz-transition:color .2s ease-in;
@@ -95,7 +93,7 @@ header {
         -webkit-transition:color .2s ease-in;
     }
     a:hover {
-        color: $guelph-yellow;
+        color: $light-grey;
         background-color: transparent !important;
     }
 
@@ -247,8 +245,18 @@ footer {
     background-color: $white;
     padding: 2px 15px 15px;
     margin: 15px 0 30px;
-    box-shadow: 0 1px 8px 1px $black;
-    -webkit-box-shadow: 0 1px 8px 1px $black;
+    box-shadow: 0 1px 2px 1px $black;
+    -webkit-box-shadow: 0 1px 2px 1px $black;
+
+    
+}
+.card-container {
+
+}
+.event-card {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* Link to google drive on an event page */

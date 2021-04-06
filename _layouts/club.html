@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% include head.html %}
+
+<body>
+    <div id="wrap">
+        {% include header.html %}
+        <div class="container">
+            <div class="col-md-12">
+                <article class="article-container">
+                    <div>
+                        <h2 class="title indent">{{ page.title }}</h2>
+                        <h3>{{ page.about }}</h3>
+                    </div>
+                    {% if page.exec %}
+                    <section>
+                        <h3> {{page.year-range}} Executive Team </h3>
+                        <ul>
+                            {% for exec in page.exec %}
+                            <li><a href="mailto:{{exec.email}}">{{ exec.position }}</a> - <strong>{{ exec.name }}</strong></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    {% endif %}
+                    {% if page.staff %}
+                    <section>
+                        <h3> {{page.year-range}} Staff </h3>
+                        <ul>
+                            {% for staff in page.staff %}
+                            <li><a href="mailto:{{staff.email}}">{{ staff.position }}</a> - <strong>{{ staff.name }}</strong></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    {% endif %}
+                    <p>{{ content }}</p>
+                    {% if page.files %}
+                    <hr class="grey">
+                    {% endif %}
+
+                    <div id="slides">
+                        {% for file in page.files %}
+                        {% if file.folder %}
+                        <a class="view-event-folder" target="_blank" href="{{ file.folder }}">View folder
+                            {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+                        {% elsif file.slides %}
+                        <a class="view-event-slides" target="_blank" href="{{ file.slides }}">View Presentations
+                            slides {%if file.author %} - ({{ file.author }}) {% endif %}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+    
+
+    {% include footer.html %}
+    {% include google-analytics.html %}
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
